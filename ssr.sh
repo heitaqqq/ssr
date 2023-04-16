@@ -28,13 +28,6 @@ colorEcho() {
     echo -e "${1}${@:2}${PLAIN}"
 }
 
-
-
-
-slogon() {
-
-}
-
 getData() {
     read -p " 请设置SSR的密码（不输入则随机生成）:" PASSWORD
     [ -z "$PASSWORD" ] && PASSWORD=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1`
